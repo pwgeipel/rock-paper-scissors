@@ -11,7 +11,7 @@ while(keepPlaying) {
 
     var random = Math.floor(Math.random() * choices.length)
     var computerChoice = choices[random]
-    console.log('computer choice:', computerChoice)
+        console.log('computer choice:', computerChoice)
     // randomly choose computerChoice
 
     var result
@@ -35,13 +35,18 @@ while(keepPlaying) {
 // display (alert) results (won, tied, lost round)
     alert("You " + result)
 // show stats (number of wins, losses, ties)
-    alert("Stats:\nWins: " + wins + "\nLosses " + losses + "\nTies: " + ties)
+    alert("Stats:\nWins: " + wins + "\nLosses: " + losses + "\nTies: " + ties)
 
     keepPlaying = confirm("Want to play again?")
 
 
-
+    var playAgain = confirm("Want to play again?")
+    if (playAgain) {
+        continue
+    } else {
+        break
+    }
+    }
 // play again?
     // restart game
 // end game
-}
